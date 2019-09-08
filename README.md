@@ -3,4 +3,4 @@
 
 # Live preview:
 
-https://diagn.github.io/rss-api/src/public/items.html
+https://diagn.github.io/rss-api/src/public/index.html
