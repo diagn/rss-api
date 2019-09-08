@@ -1,0 +1,248 @@
+body{
+    background-color: #c1d5de;
+    margin: 2px;
+}
+
+/*CSS for the Api Response div*/
+#apiResponse{
+    border: 5px solid #4dd2a4;
+    border-radius: 4px;
+    margin: 20px auto;
+    width: 50%;
+    height: 100%;
+    background-color: #4a48489c;
+    font-size: 50px;
+    color: #23e898;
+    text-align: center;
+    line-height: 500px;
+}
+.showElements{
+    display: block;
+}
+#message{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.48);
+}
+.hidden{
+    display: none;
+}
+
+/* CSS for all buttons */
+button{
+    margin-bottom: 10px;
+    background: 
+    -webkit-gradient(linear, left top, left bottom, 
+    color-stop(15%,#ecab60), color-stop(49%,#f0aa41), 
+    color-stop(48%,#f0b330), color-stop(50%,#f1a706));
+    border: 2px solid #f7a800;
+    border-radius: 4px;
+    padding: 5px; 
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Times Georgia, Times, 'Times New Roman', serif;
+    color: #040707;
+    text-align: center;
+}
+#changeBttn{
+    display: inline-block;
+    margin: 2px;
+    text-align: center;
+    font-size: 15px;
+    width: 55px;
+    height: 25px;
+    cursor: pointer;
+}
+.fetchTableBtn{
+    display: block;
+    margin: auto;
+    line-height: 12.5px;
+    margin-left: 45px;
+}
+#changeBttn{
+  display: block;
+  line-height: 12.5px;
+  margin: auto;
+}
+#feedBtn{
+    display: block;
+    margin: auto;
+}
+#itemBtn{
+    display: block;
+    margin: auto;
+}
+
+/*CSS for the tableSelect_ dropdown list*/
+.selectStyle{
+    display: inline-block;
+    width: 55px;
+    margin-right: 5px;
+    height: 30px;
+    font-size: 11px;
+    float: left;
+    margin-top: 5px;
+}
+
+/*CSS for the tableSelect_'s options */
+option{
+    font-weight: bold;
+    color: #040707;
+}
+
+/*CSS for hideDiv link (X link/button)*/
+#hideDiv{
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+  }
+#hideDiv:hover{
+    opacity: 1;
+    background-color: #000
+  }
+#hideDiv:before,#hideDiv:after{
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+  }
+#hideDiv:before{
+    transform: rotate(45deg);
+  }
+#hideDiv:after{
+    transform: rotate(-45deg);
+  }
+
+/*CSS for the title*/
+h1{
+    text-align: center;
+    font-family: 'Aclonica';
+    text-decoration: underline;
+}
+
+/*CSS for the Add New Feed div*/
+#addbutton-container{
+    display: block;
+    border: 5px solid #4dd2a4;
+    border-radius: 8px;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 1px;
+    background-color: rgba(38, 208, 145, 0.753);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/*CSS for the menu top bar*/
+.menu-bar{
+    background-color: #5cdcac;
+    border: solid 2px #52dcac;
+    border-radius: 10px;
+}
+
+/*CSS for the Add New Feed input*/
+#newRss{
+    width: 144px;
+    height: 25px;
+    display: inline-block;
+}
+.addContainer{
+    width: 50%;
+    margin: 20px auto;
+}
+/*CSS for the top menu bar list*/
+ul{
+    display: inline-block;
+}
+li, a{
+    display: inline-block;
+}
+a{
+    margin-left: 80px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 20px;
+}
+a:hover{
+    text-align: center;
+    color: wheat;
+}
+
+/*CSS for the top menu search bar*/
+#searchBar{
+    margin-left: 500px;
+}
+
+/*CSS for the dinamically created table on the Feeds page*/
+#copiedTable{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    border-spacing: 0;
+}
+#copiedTable td{
+    line-height: 40px;
+}
+#copiedTable thead{
+    background-color: #1dbfb6;
+}
+tr:nth-child(even) {
+   background-color: #1dbfb6;
+}
+
+/*CSS for the dinamically created table on the Fetched items page*/
+#itemsTable{
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+}
+#itemsTable td{
+    width: 19%;
+    display: inline-block;
+}
+#itemsTable td:nth-child(even){
+    width: 80%;
+    display: inline-block;
+}
+#itemsTable tbody{
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+#itemsTable tr{
+    width: 100%;
+    display: block;
+    height: 30px;
+}
+#itemsTable thead{
+    width:40%;
+    display: block;
+    background-color: #1dbfb6;
+    margin: auto;
+}
+
+/*CSS for the icon found next to the Search Bar*/
+#searchIcon{
+    cursor: pointer;
+}
+
+/*CSS for the hidden div that contains the request's responses*/
+#rspMsgFetch{
+    font-size: 50px;
+    color: #23e898;
+    text-align: center;
+    line-height: 500px;
+}

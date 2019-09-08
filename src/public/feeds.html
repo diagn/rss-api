@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <script src="/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="startFeedsPage()">
+
+        <div class="menu-bar">
+            <ul id="menuList">
+                <li>
+                    <a href="feeds.html">Feeds</a>
+                </li>
+                <li>
+                    <a href="index.html">Add new feed</a>
+                </li>
+                <li>
+                    <a href="items.html">Fetched items</a>
+                </li>
+            </ul>
+            
+            <input id="searchBar" type="search"/>
+            <i id="searchIcon" class="fa fa-search"></i>
+            
+        </div>
+        
+       <h1>Feeds</h1>
+
+       <button id="feedBtn" type="button" >Feeds</button>
+
+        <div id="">
+            <table id="copiedTable" >
+                
+            </table>
+        </div>
+
+        <div id="message" class="hidden" >
+            <div class="messageHeading">
+               <span>
+                   Api Response.
+               </span>
+               <span>
+                    <a href="#" id="hideDiv" onclick="hide('message')"></a>
+               </span>
+            </div>
+            <div id="rspMsgFetch"></div>
+       </div>
+
+    </body>
+
+</html>
