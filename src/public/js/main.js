@@ -43,7 +43,7 @@ function clickChange() {
     var status          = document.getElementById( "tableSelect_" + this.dataset.id ); 
     var selectedValue   = status.options[status.selectedIndex].value;
 
-    doRequest( "POST", '/feed/change/', {id: this.dataset.id, value: selectedValue} , false, true );
+    doRequest( "POST", '/feed/change/', {id: this.dataset.id, value: selectedValue} , true );
 };
 
 //Shows the table that contains feeds
@@ -70,6 +70,7 @@ function clickItems() {
             doRequest( "GET", "/items" );
         });
     }
+
     var e = document.getElementById( "itemBtn" );
     if ( e != null ) {
         e.addEventListener( "click", function() {
@@ -86,7 +87,7 @@ function doRequest( method, url, data = false, displayMessage = false ) {
        if ( this.readyState == 4 && this.status == 200 ) {
             var element = document.getElementById( "apiResponse" );
             
-            if ( element != null || displayMessage == 1 ) {
+            if ( element != null || displayMessage === true ) {
                 var container =  document.getElementById( "message" );
                 if ( element != null ) {
                     element.innerHTML = globalfeeds = request.response;

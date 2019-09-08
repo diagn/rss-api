@@ -181,11 +181,6 @@ a:hover{
     color: wheat;
 }
 
-/*CSS for the top menu search bar*/
-#searchBar{
-    margin-left: 500px;
-}
-
 /*CSS for the dinamically created table on the Feeds page*/
 #copiedTable{
     width: 60%;
@@ -232,11 +227,6 @@ tr:nth-child(even) {
     display: block;
     background-color: #1dbfb6;
     margin: auto;
-}
-
-/*CSS for the icon found next to the Search Bar*/
-#searchIcon{
-    cursor: pointer;
 }
 
 /*CSS for the hidden div that contains the request's responses*/
