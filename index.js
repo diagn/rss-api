@@ -1,19 +1,23 @@
-const http = require("http");
-const hostname = 'localhost';
-const port = 3000;
-const express = require('express');
-const fs = require('fs');
-const app = express();
-const router= express.Router();
-var globalFeeds;
+const http      = require("http");
+const hostname  = 'localhost';
+const port      = 3000;
+const express   = require('express');
+const fs        = require('fs');
+const app       = express();
+const router    = express.Router();
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 app.use('/', express.static('./src/public', {etag: false}));
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   app.use(express.static('./src/public/index.html', {etag: false}));
 });
 
-app.get('/feeds.html', function(req, res) {
+app.get('/feeds.html', (req, res) => {
   app.use(express.static('./src/public/feeds.html', {etag: false}));
 });
 
